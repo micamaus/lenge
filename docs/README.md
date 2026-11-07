@@ -19,3 +19,9 @@ separate files for every idea. Brainstorming is not a commitment to build.
 - Use TypeScript with Effect (Effect-TS) from the start for the backend; hosting is still open.
 - Build a native iOS app in Swift with SwiftUI.
 - Plan to build and run the iOS app on the configured Mac VM.
+
+## First implementation
+
+- Requested: a minimal iOS start screen showing exactly “Halomika”.
+- Native SwiftUI, centered text, system colors and Dynamic Type; no backend yet.
+- Verify by building and launching in the configured iPhone Simulator, then capture a screenshot.
