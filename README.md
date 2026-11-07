@@ -1,20 +1,25 @@
 # lenge
 
-## Planning
+A native SwiftUI iOS app. For now, its start screen simply says **Halomika**.
+Requires Xcode and iOS 17 or newer. No external dependencies or backend required.
 
-Use [docs/](docs/README.md) to brainstorm and agree on what to build before
-writing code. Keep the living plan short and update it as ideas evolve.
+## Run
 
-## Workspace setup
+Open `ios/Lenge.xcodeproj`, select the **Lenge** scheme and an iPhone Simulator,
+and press Run. For a physical device, select your own signing team first.
 
-Run the executable setup entry point:
+To build for the configured Simulator from the command line:
 
 ```sh
 ./.wieland/setup
+UDID=$(cat ~/.wieland-warm-simulator)
+xcodebuild -project ios/Lenge.xcodeproj -scheme Lenge -configuration Debug \
+  -destination "platform=iOS Simulator,id=$UDID" -derivedDataPath .build/ios \
+  ARCHS=arm64 ONLY_ACTIVE_ARCH=YES COMPILATION_CACHE_ENABLE_CACHING=YES \
+  CODE_SIGNING_ALLOWED=NO -showBuildTimingSummary build
+xcrun simctl install "$UDID" .build/ios/Build/Products/Debug-iphonesimulator/Lenge.app
+xcrun simctl launch "$UDID" com.micamaus.lenge
 ```
 
-The script can be invoked from any working directory and is safe to rerun.
-This repository currently has no application code or dependency manifests, so
-setup does not install toolchains or dependencies, start services, or require
-credentials. Extend `.wieland/setup` when the new application's stack is added;
-the legacy applications have their own setup scripts in their respective repos.
+Use a booted iPhone Simulator's UDID if the workspace's warm-device file is absent.
+Product decisions live in [docs/](docs/README.md). The legacy repositories are read-only.

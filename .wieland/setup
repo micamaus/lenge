@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 # Workspace setup entry point. Safe to rerun from any working directory.
 set -euo pipefail
-
 cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.."
-
-# This repository currently has no application code or dependency manifests.
-# Add dependency installation here when the new stack is introduced; do not
-# bootstrap either legacy application or assume their toolchains are needed.
-printf '%s\n' 'lenge setup complete: no dependencies to install yet.'
+xcodebuild -version
+printf '%s\n' 'lenge setup complete: native SwiftUI app, no external dependencies.'
