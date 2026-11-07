@@ -4,6 +4,12 @@
 
 `micamaus/lenge` is the active project. All implementation, documentation, configuration, and other changes must be made in this repository.
 
+## Planning and documentation
+
+- Keep product brainstorming, plans, and decisions in `docs/`, starting with `docs/README.md`.
+- Prefer updating existing docs over adding files. Keep them very short and human-readable.
+- Clarify and agree on plans before writing application code; brainstorming alone is not approval to implement.
+
 ## Legacy repositories are read-only
 
 The following repositories exist only to provide historical context about what was built before:

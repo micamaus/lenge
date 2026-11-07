@@ -1,5 +1,10 @@
 # lenge
 
+## Planning
+
+Use [docs/](docs/README.md) to brainstorm and agree on what to build before
+writing code. Keep the living plan short and update it as ideas evolve.
+
 ## Workspace setup
 
 Run the executable setup entry point:
