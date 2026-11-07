@@ -6,14 +6,16 @@ separate files for every idea. Brainstorming is not a commitment to build.
 
 ## Brainstorm
 
+- Cloudflare Workers is a candidate for hosting the backend, not a final choice.
+
+## Open questions
+
 - Who is this for, and what problem should it solve?
 - What should the core experience look and feel like?
 - What belongs in the smallest useful first version, and what can wait?
 
-## Open questions
-
-Add anything we need to clarify before implementation.
-
 ## Decisions
 
-Record agreed choices here, with a short reason. Leave unconfirmed ideas above.
+- Use TypeScript with Effect (Effect-TS) from the start for the backend; hosting is still open.
+- Build a native iOS app in Swift with SwiftUI.
+- Plan to build and run the iOS app on the configured Mac VM.
